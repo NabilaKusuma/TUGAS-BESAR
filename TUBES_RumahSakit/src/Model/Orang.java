@@ -15,10 +15,12 @@ import java.util.List;
 public abstract class Orang {
     private String Nama;
     private int Umur;
+    private String tglLahir;
     
-    public Orang (String Nama, int Umur) {
+    public Orang (String Nama, int Umur, String tglLahir) {
         this.Nama = Nama;
         this.Umur = Umur;
+        this.tglLahir = tglLahir;
     }
 
     public String getNama() {
@@ -36,4 +38,14 @@ public abstract class Orang {
     public void setUmur(int Umur) {
         this.Umur = Umur;
     }
+
+    public String getTglLahir() {
+        return tglLahir;
+    }
+
+    public void setTglLahir(String tglLahir) {
+        this.tglLahir = tglLahir;
+    }
+    
+    
 }

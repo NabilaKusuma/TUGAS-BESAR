@@ -7,6 +7,7 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
  
 
 /**
@@ -29,13 +30,13 @@ public class Aplikasi {
         daftarRuangan = new ArrayList();
     }
     
-    public void addDokter(String Nama, int Umur, String IdDokter, String Spesialis) {
-        daftarDokter.add(new Dokter(Nama, Umur, IdDokter, Spesialis));
+    public void addDokter(String Nama, int Umur, String tglLahir, String IdDokter, String Spesialis) {
+        daftarDokter.add(new Dokter(Nama, Umur, tglLahir, IdDokter, Spesialis));
         jmlDokter++;
     }
     
-    public void addPasien(String IdPasien, String Nama, int Umur) {
-        daftarPasien.add(new Pasien(IdPasien, Nama, Umur));
+    public void addPasien(String Nama, int Umur, String tglLahir, String IdPasien) {
+        daftarPasien.add(new Pasien(Nama, Umur, tglLahir, IdPasien));
         jmlPasien++;
     }
   
@@ -57,5 +58,20 @@ public class Aplikasi {
                 break;
             }
         }
+    }
+    
+    public String[] getListPasien(){
+        List idPasien = daftarPasien.stream().map(p -> p.toString()).collect(Collectors.toList());
+        return (String[]) idPasien.stream().toArray(size -> new String[size]);
+    }
+    
+    public String[] getListDokter(){
+        List idDokter = daftarDokter.stream().map(d -> d.toString()).collect(Collectors.toList());
+        return (String[]) idDokter.stream().toArray(size -> new String[size]);
+    }
+    
+    public String[] getListRuangan(){
+        List idRuangan = daftarRuangan.stream().map(r -> r.toString()).collect(Collectors.toList());
+        return (String[]) idRuangan.stream().toArray(size -> new String[size]);
     }
 }

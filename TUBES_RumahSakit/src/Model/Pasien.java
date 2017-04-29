@@ -13,8 +13,8 @@ public class Pasien extends Orang{
     private String IdPasien;
     
     
-    public Pasien (String IdPasien, String Nama, int Umur) {
-        super(Nama, Umur);
+    public Pasien (String Nama, int Umur, String tglLahir, String IdPasien) {
+        super(Nama, Umur, tglLahir);
         this.IdPasien = IdPasien;
     }
 
@@ -24,5 +24,12 @@ public class Pasien extends Orang{
 
     public void setIdPasien(String IdPasien) {
         this.IdPasien = IdPasien;
+    }
+    
+    public String toString(){
+        return "Id Pasien      : " + getIdPasien() + "\n" +
+                "Nama          : " + getNama() + "\n" +
+                "Tanggal Lahir : " + getTglLahir() + "\n" +
+                "Umur          : " + getUmur() + "\n";    
     }
 }

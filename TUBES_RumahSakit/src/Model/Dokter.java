@@ -13,8 +13,8 @@ public class Dokter extends Orang{
     private String IdDokter;
     private String Spesialis;
     
-    public Dokter (String Nama, int Umur, String IdDokter, String Spesialis) {
-        super(Nama,Umur);
+    public Dokter (String Nama, int Umur, String tglLahir, String IdDokter, String Spesialis) {
+        super(Nama, Umur, tglLahir);
         this.IdDokter = IdDokter;
         this.Spesialis = Spesialis;
     }
@@ -33,5 +33,12 @@ public class Dokter extends Orang{
 
     public void setSpesialis(String Spesialis) {
         this.Spesialis = Spesialis;
+    }
+    
+    public String toString(){
+        return "Id Dokter      : " + getIdDokter() + "\n" +
+                "Nama          : " + getNama() + "\n" +
+                "Tanggal Lahir : " + getTglLahir() + "\n" +
+                "Umur          : " + getUmur() + "\n";    
     }
 }

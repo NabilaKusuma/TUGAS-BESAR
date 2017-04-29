@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Ruangan {
     private String IdRuangan;
+    private String namaRuangan;
     private List<PasienInap> daftarPasien;
     private int jmlPasien;
     
@@ -22,14 +23,13 @@ public class Ruangan {
         jmlPasien++;
     }
     
-    public PasienInap getPasienInap(int index){ //get by index
+    public PasienInap getPasienInap(int idx){ //get by index
         return daftarPasien.get(jmlPasien);
         
     }
     
     //public PasienInap getPasienInap(String Id){ //get by Id Pasien di consule
-        //return null;
-        
+    //    return null;
     //}
 
     public String getIdRuangan() {
@@ -40,12 +40,27 @@ public class Ruangan {
         this.IdRuangan = IdRuangan;
     }
 
-    public void removePasienInap(int index){ 
+    public String getNamaRuangan() {
+        return namaRuangan;
+    }
+
+    public void setNamaRuangan(String namaRuangan) {
+        this.namaRuangan = namaRuangan;
+    }
+
+    public void removePasienInap(String idPasien){ 
         for (int i=0 ; i<jmlPasien ; i++){
-            if (daftarPasien.get(i).getPasien().equals(IdRuangan)){
+            if (daftarPasien.get(i).getPasien().equals(idPasien)){
                 daftarPasien.remove(i);
                 break;
             }
         }
+    }
+    
+    @Override
+    public String toString(){
+        String r = "Id Ruangan      : " + getIdRuangan() + "\n" +
+                "Nama           : " + getNamaRuangan() + "\n"; //nama pasien inap belom 
+        return r;
     }
 }
