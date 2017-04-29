@@ -10,21 +10,21 @@ package Model;
  * @author Nabila Kusuma
  */
 public class Dokter extends Orang{
-    private String Id;
+    private String IdDokter;
     private String Spesialis;
     
-    public Dokter (String Nama, int Umur, String Id, String Spesialis) {
+    public Dokter (String Nama, int Umur, String IdDokter, String Spesialis) {
         super(Nama,Umur);
-        this.Id = Id;
+        this.IdDokter = IdDokter;
         this.Spesialis = Spesialis;
     }
 
-    public String getId() {
-        return Id;
+    public String getIdDokter() {
+        return IdDokter;
     }
 
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setIdDokter(String IdDokter) {
+        this.IdDokter = IdDokter;
     }
 
     public String getSpesialis() {

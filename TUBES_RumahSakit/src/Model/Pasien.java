@@ -10,19 +10,19 @@ package Model;
  * @author Nabila Kusuma
  */
 public class Pasien extends Orang{
-    private String Id;
+    private String IdPasien;
     
     
-    public Pasien (String Id, String Nama, int Umur) {
+    public Pasien (String IdPasien, String Nama, int Umur) {
         super(Nama, Umur);
-        this.Id = Id;
+        this.IdPasien = IdPasien;
     }
 
-    public String getId() {
-        return Id;
+    public String getIdPasien() {
+        return IdPasien;
     }
 
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setIdPasien(String IdPasien) {
+        this.IdPasien = IdPasien;
     }
 }
