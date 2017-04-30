@@ -26,6 +26,7 @@ public class Pasien extends Orang{
         this.IdPasien = IdPasien;
     }
     
+    @Override
     public String toString(){
         return "Id Pasien      : " + getIdPasien() + "\n" +
                 "Nama          : " + getNama() + "\n" +

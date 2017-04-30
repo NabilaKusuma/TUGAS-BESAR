@@ -6,6 +6,7 @@
 package Model;
 
 import java.util.List;
+import Model.Pasien;
 
 /**
  *
@@ -16,20 +17,35 @@ public class Ruangan {
     private String namaRuangan;
     private List<PasienInap> daftarPasien;
     private int jmlPasien;
-    
-    public void tambahPasienInap (Pasien p, Dokter d) {
-        PasienInap newPasien = new PasienInap(p,d);
-        daftarPasien.add(newPasien);
-        jmlPasien++;
+
+    public Ruangan(String IdRuangan, String namaRuangan) {
+        this.IdRuangan = IdRuangan;
+        this.namaRuangan = namaRuangan;
+        //this.jmlPasien = jmlPasien;
     }
     
-    public PasienInap getPasienInap(int idx){ //get by index
-        return daftarPasien.get(jmlPasien);
-        
+    public void addPasienInap(Pasien pasien, Dokter dokter) {
+        daftarPasien.add(new PasienInap(pasien, dokter));
     }
     
-    //public PasienInap getPasienInap(String Id){ //get by Id Pasien di consule
-    //    return null;
+    
+    public PasienInap getPasienInapIdx(int index){ //get by index
+        return daftarPasien.get(index);
+    }
+    
+    //public PasienInap getPasienInapId(String Id){ //get by index
+    //    return daftarPasien.get(Id);
+    //}
+    
+    //public PasienInap getPasienInapId(String Id){
+    //    Pasien p = null;
+    //    for (int i = 0 ; i<=jmlPasien ; i++){
+    //        if (daftarPasien.get(i).getIdPasien().equals(Id)){
+    //            p = daftarPasien.get(i);
+    //            break;
+    //        }
+    //    }
+    //    return p;
     //}
 
     public String getIdRuangan() {

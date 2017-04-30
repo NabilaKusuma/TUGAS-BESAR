@@ -39,6 +39,7 @@ public class Dokter extends Orang{
         return "Id Dokter      : " + getIdDokter() + "\n" +
                 "Nama          : " + getNama() + "\n" +
                 "Tanggal Lahir : " + getTglLahir() + "\n" +
-                "Umur          : " + getUmur() + "\n";    
+                "Umur          : " + getUmur() + "\n" +
+                "Spesialis     : " + getSpesialis() + "\n";    
     }
 }
