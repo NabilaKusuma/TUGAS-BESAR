@@ -8,6 +8,7 @@ package Model;
 import java.util.List;
 import Model.Pasien;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -47,14 +48,16 @@ public class Ruangan {
         PasienInap pi = new PasienInap(pasien,dokter);
     }
     
-    //public PasienInap getPasienInap (String id) {
-    //    for (int i = 0; i <= PasienInap.; i++) {
-    //        if (daftarPasienInap.get(i).getPasien().getIdPasien().equals(id)){
-    //            return PasienInap[i];
-    //        }
-    //    }
-    //    return null;
-    //}
+    public PasienInap getPasienInap (String id) {
+        for (int i = 0; i <= daftarPasienInap.length; i++) {
+            if (daftarPasienInap[i].getPasien().getIdPasien().equals(id)){
+                return daftarPasienInap[i];
+            } else {
+                System.out.println("Pasien tidak terdaftar sebagai pasien inap");
+            }
+        }
+        return null;
+    }
    
     public PasienInap getPasienInapIdx(int index){ //get by index
         return daftarPasienInap[index];
@@ -76,14 +79,34 @@ public class Ruangan {
         return r;
     }
     
-    //public String viewAll(){
-    //    String r = "Id Ruangan  : " + getIdRuangan() + "\n" +
-    //               "Nama Uangan : " + getNamaRuangan() + "\n";
-    //    for (int i = 0; i <=daftarPasienInap.length; i++) {
-    //        String a = daftarPasienInap[i].toString()+ "\n" ;
-    //    }
-    //    return r;
-    //    return a;
-    //    i++;
-    //}
+    public String viewAll(){
+        String r = "Id Ruangan  : " + getIdRuangan() + "\n" +
+                   "Nama Uangan : " + getNamaRuangan() + "\n";
+        for (int i = 0; i <=daftarPasienInap.length; i++) {
+            String a = daftarPasienInap[i].toString()+ "\n" ;
+        }
+        return r;
+    }
+    
+    public String toStringAll() {
+            //return IdRuangan + " , " + namaRuangan + " , " + daftarPasienInap[i];
+            String r = "Id Ruangan  : " + getIdRuangan() + "\n" +
+                       "Nama Uangan : " + getNamaRuangan() + "\n" +
+                       "Nama Pasien : " + getDaftarPasienInap();
+        return r;
+    }
+    
+    public String getListRuanganLengkap() {
+        String s = "";
+        for (int i = 0; i <=daftarPasienInap.length; i++) {
+            s += daftarPasienInap[i].getPasien()+ "\n";
+        }
+        return s;
+    }
+
+    public PasienInap[] getDaftarPasienInap() {
+        return daftarPasienInap;
+    }
+    
+    
 }

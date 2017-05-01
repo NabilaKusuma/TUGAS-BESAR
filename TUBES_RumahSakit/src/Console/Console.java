@@ -201,6 +201,7 @@ public class Console {
                 System.out.println("  4. Input Pasien Inap");
                 System.out.println("  5. Input Diagnosa Pasien");
                 System.out.println("  6. Lihat Ruangan beserta Pasien Inap"); //ada Pasien Inap
+                System.out.println("  7. Lihat Diagnosa Seluruh Pasien Inap");
                 System.out.println("");
                 System.out.print("Pilih Menu :");
                 pil1 = inputPilihan();
@@ -260,6 +261,12 @@ public class Console {
                     case 6:
                         System.out.println("");
                         System.out.println("    LIHAT RUANGAN BESERTA PASIEN INAP");
+                        app.viewListConsole(app.getListRuanganA());
+                        break;
+                        
+                    case 7:
+                        System.out.println("");
+                        System.out.println("    LIHAT DIAGNOSA SELURUH PASIEN INAP");
                         System.out.print("Masukkan Id Ruangan: ");//ADA PASIEN INAPNYA
                         
                     case 0:
@@ -283,7 +290,6 @@ public class Console {
                 System.out.println("   Sistem Informasi Data Pasien Inap");
                 System.out.println("             di Rumah Sakit");
                 System.out.println("_________________________________________");
-                System.out.println("");
                 System.out.println("");
                 System.out.println("  Menu :");
                 System.out.println("  1. Data Pasien");

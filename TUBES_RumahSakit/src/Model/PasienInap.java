@@ -19,8 +19,8 @@ public class PasienInap {
     private int JumDiag=0;
     
     public PasienInap(Pasien pasien, Dokter dokter){
-        this.pasien = pasien;
-        this.dokter = dokter;
+          this.pasien = pasien;
+          this.dokter = dokter;
     }
 
     public String getDiagnosa(int a) {

@@ -253,9 +253,34 @@ public class Aplikasi {
         return (String[]) idRuangan.stream().toArray(size -> new String[size]);
     }
     
+    public String[] getListRuanganA() {
+        List idR = daftarRuangan.stream()
+                .map(r -> r.toStringAll()).collect(Collectors.toList());
+        return (String[]) idR.stream().toArray(size -> new String[size]);
+    }
+    
+    public String getListRuanganLengkap(String idRuangan){
+        Ruangan r, rCek;
+        String s = "";
+        rCek = getRuangan(idRuangan);
+        if ((rCek != null) && (rCek instanceof Ruangan)){
+            r = rCek;
+            s = r.getListRuanganLengkap();
+            return s;
+        } else {
+            throw new IllegalStateException("Paket wisata tidak ada");
+        }
+    }
+    
     public void viewListConsole(String[] list) {
         Arrays.stream(list).forEach(System.out::println);
     }
+    
+    //public String viewAll(){
+    //    String s = "";
+    //    s = s + viewAll();
+    //    return s;
+    //}
 }
 
 
