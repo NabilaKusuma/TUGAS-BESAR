@@ -3,16 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Console/Console.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Database/FileIO.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/PasienInap.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Driver/Driver.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/GUI/DataDokter.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Dokter.java</file>
-            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Aplikasi.java</file>
-            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/tubes_rumahsakit/TUBES_RumahSakit.java</file>
-            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Ruangan.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Pasien.java</file>
             <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Orang.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Console/Console.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/GUI/MenuUtama.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Aplikasi.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/GUI/DataRuangan.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/tubes_rumahsakit/TUBES_RumahSakit.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/GUI/DataPasien.java</file>
+            <file>file:/C:/Users/Nabila%20Kusuma/Documents/GitHub/Tugas-Besar/TUBES_RumahSakit/src/Model/Ruangan.java</file>
         </group>
     </open-files>
 </project-private>

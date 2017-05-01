@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package viewGUI;
+package GUI;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -32,9 +32,9 @@ public class MenuUtama extends javax.swing.JFrame {
 
         jButton4 = new javax.swing.JButton();
         jLSIPIRS = new java.awt.Label();
-        jBDataPasien = new javax.swing.JButton();
-        jBDataRuangan = new javax.swing.JButton();
-        jBDataDokter = new javax.swing.JButton();
+        JBDataPasien = new javax.swing.JButton();
+        JBDataRuangan = new javax.swing.JButton();
+        JBDataDokter = new javax.swing.JButton();
         JBExit = new javax.swing.JButton();
 
         jButton4.setText("jButton1");
@@ -47,14 +47,14 @@ public class MenuUtama extends javax.swing.JFrame {
         jLSIPIRS.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLSIPIRS.setText("Sistem Informasi Pasien Inap Rumah Sakit");
 
-        jBDataPasien.setBackground(new java.awt.Color(51, 51, 255));
-        jBDataPasien.setText("Data Pasien");
+        JBDataPasien.setBackground(new java.awt.Color(51, 51, 255));
+        JBDataPasien.setText("Data Pasien");
 
-        jBDataRuangan.setBackground(new java.awt.Color(0, 0, 255));
-        jBDataRuangan.setText("Data Ruangan");
+        JBDataRuangan.setBackground(new java.awt.Color(0, 0, 255));
+        JBDataRuangan.setText("Data Ruangan");
 
-        jBDataDokter.setBackground(new java.awt.Color(0, 0, 255));
-        jBDataDokter.setText("Data Dokter");
+        JBDataDokter.setBackground(new java.awt.Color(0, 0, 255));
+        JBDataDokter.setText("Data Dokter");
 
         JBExit.setBackground(new java.awt.Color(51, 51, 255));
         JBExit.setText("Exit");
@@ -78,9 +78,9 @@ public class MenuUtama extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(197, 197, 197)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBDataDokter, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBDataPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBDataRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(JBDataDokter, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JBDataPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JBDataRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,11 +89,11 @@ public class MenuUtama extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLSIPIRS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(jBDataPasien)
+                .addComponent(JBDataPasien)
                 .addGap(18, 18, 18)
-                .addComponent(jBDataDokter)
+                .addComponent(JBDataDokter)
                 .addGap(18, 18, 18)
-                .addComponent(jBDataRuangan)
+                .addComponent(JBDataRuangan)
                 .addGap(40, 40, 40)
                 .addComponent(JBExit)
                 .addGap(31, 31, 31))
@@ -153,44 +153,78 @@ public class MenuUtama extends javax.swing.JFrame {
     }
 
     public JButton getjBDataDokter() {
-        return jBDataDokter;
+        return JBDataDokter;
     }
 
     public void setjBDataDokter(JButton jBDataDokter) {
-        this.jBDataDokter = jBDataDokter;
+        this.JBDataDokter = jBDataDokter;
     }
 
     public JButton getjBDataPasien() {
-        return jBDataPasien;
+        return JBDataPasien;
     }
 
     public void setjBDataPasien(JButton jBDataPasien) {
-        this.jBDataPasien = jBDataPasien;
+        this.JBDataPasien = jBDataPasien;
     }
 
     public JButton getjBDataRuangan() {
-        return jBDataRuangan;
+        return JBDataRuangan;
     }
 
     public void setjBDataRuangan(JButton jBDataRuangan) {
-        this.jBDataRuangan = jBDataRuangan;
+        this.JBDataRuangan = jBDataRuangan;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JBDataDokter;
+    private javax.swing.JButton JBDataPasien;
+    private javax.swing.JButton JBDataRuangan;
     private javax.swing.JButton JBExit;
-    private javax.swing.JButton jBDataDokter;
-    private javax.swing.JButton jBDataPasien;
-    private javax.swing.JButton jBDataRuangan;
     private javax.swing.JButton jButton4;
     private java.awt.Label jLSIPIRS;
     // End of variables declaration//GEN-END:variables
 
-    public void ActionListener(ActionListener e){
+    public void addActionListener(ActionListener e){
         JBExit.addActionListener(e);
-        jBDataDokter.addActionListener(e);
-        jBDataPasien.addActionListener(e);
-        jBDataRuangan.addActionListener(e);
+        JBDataDokter.addActionListener(e);
+        JBDataPasien.addActionListener(e);
+        JBDataRuangan.addActionListener(e);
+       
     }
+
+    public JButton getJBDataDokter() {
+        return JBDataDokter;
+    }
+
+    public void setJBDataDokter(JButton JBDataDokter) {
+        this.JBDataDokter = JBDataDokter;
+    }
+
+    public JButton getJBDataPasien() {
+        return JBDataPasien;
+    }
+
+    public void setJBDataPasien(JButton JBDataPasien) {
+        this.JBDataPasien = JBDataPasien;
+    }
+
+    public JButton getJBDataRuangan() {
+        return JBDataRuangan;
+    }
+
+    public void setJBDataRuangan(JButton JBDataRuangan) {
+        this.JBDataRuangan = JBDataRuangan;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public void setjButton4(JButton jButton4) {
+        this.jButton4 = jButton4;
+    }
+    
     
     
 }

@@ -202,6 +202,7 @@ public class Console {
                 System.out.println("  5. Input Diagnosa Pasien");
                 System.out.println("  6. Lihat Ruangan beserta Pasien Inap"); //ada Pasien Inap
                 System.out.println("  7. Lihat Diagnosa Seluruh Pasien Inap");
+                System.out.println("  8. Mencari Pasien Inap");
                 System.out.println("");
                 System.out.print("Pilih Menu :");
                 pil1 = inputPilihan();
@@ -237,7 +238,7 @@ public class Console {
                         String idRuangan = IStr.nextLine();
                         System.out.print("Masukkan Id Pasien : ");
                         String idPasien = IStr.nextLine();
-                        System.out.print("Masukkan Id Dokter :");
+                        System.out.print("Masukkan Id Dokter : ");
                         String idDktr = IStr.nextLine();
                         Ruangan r = app.getRuangan(idRuangan);
                         Pasien p = app.getPasien(idPasien);
@@ -268,6 +269,18 @@ public class Console {
                         System.out.println("");
                         System.out.println("    LIHAT DIAGNOSA SELURUH PASIEN INAP");
                         System.out.print("Masukkan Id Ruangan: ");//ADA PASIEN INAPNYA
+                        
+                    case 8:
+                        System.out.println("");
+                        System.out.println("    MENCARI PASIEN INAP");
+                        System.out.print("Masukkan Id Ruangan: ");
+                        String idru = IStr.nextLine();
+                        System.out.print("Masukkan Id Pasien : ");
+                        String idpas = IStr.nextLine();
+                        r = app.getRuangan(idpas);
+                        //p = app.getPasien(Id);
+                        
+
                         
                     case 0:
                         break;

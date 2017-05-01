@@ -9,6 +9,7 @@ import java.util.List;
 import Model.Pasien;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -88,10 +89,14 @@ public class Ruangan {
         return r;
     }
     
+    public PasienInap[] getDaftarPasienInap() {
+        return daftarPasienInap;
+    }
+    
     public String toStringAll() {
             //return IdRuangan + " , " + namaRuangan + " , " + daftarPasienInap[i];
             String r = "Id Ruangan  : " + getIdRuangan() + "\n" +
-                       "Nama Uangan : " + getNamaRuangan() + "\n" +
+                       "Nama Ruangan : " + getNamaRuangan() + "\n" +
                        "Nama Pasien : " + getDaftarPasienInap();
         return r;
     }
@@ -104,9 +109,6 @@ public class Ruangan {
         return s;
     }
 
-    public PasienInap[] getDaftarPasienInap() {
-        return daftarPasienInap;
-    }
     
     
 }

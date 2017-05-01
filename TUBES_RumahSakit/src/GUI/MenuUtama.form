@@ -45,9 +45,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jBDataDokter" min="-2" pref="180" max="-2" attributes="0"/>
-                          <Component id="jBDataPasien" min="-2" pref="180" max="-2" attributes="0"/>
-                          <Component id="jBDataRuangan" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
+                          <Component id="JBDataDokter" min="-2" pref="180" max="-2" attributes="0"/>
+                          <Component id="JBDataPasien" min="-2" pref="180" max="-2" attributes="0"/>
+                          <Component id="JBDataRuangan" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -61,11 +61,11 @@
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jLSIPIRS" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="35" max="32767" attributes="0"/>
-              <Component id="jBDataPasien" min="-2" max="-2" attributes="0"/>
+              <Component id="JBDataPasien" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jBDataDokter" min="-2" max="-2" attributes="0"/>
+              <Component id="JBDataDokter" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jBDataRuangan" min="-2" max="-2" attributes="0"/>
+              <Component id="JBDataRuangan" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="JBExit" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -86,7 +86,7 @@
         <Property name="text" type="java.lang.String" value="Sistem Informasi Pasien Inap Rumah Sakit"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jBDataPasien">
+    <Component class="javax.swing.JButton" name="JBDataPasien">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="33" red="33" type="rgb"/>
@@ -94,7 +94,7 @@
         <Property name="text" type="java.lang.String" value="Data Pasien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jBDataRuangan">
+    <Component class="javax.swing.JButton" name="JBDataRuangan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="0" type="rgb"/>
@@ -102,7 +102,7 @@
         <Property name="text" type="java.lang.String" value="Data Ruangan"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jBDataDokter">
+    <Component class="javax.swing.JButton" name="JBDataDokter">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="0" type="rgb"/>
