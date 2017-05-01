@@ -68,7 +68,6 @@ public class Console {
                         System.out.print("Id Pasien    : ");
                         String IdPasien = IStr.nextLine();
                         app.createPasien(Nama, Umur, tglLahir, IdPasien);
-                        System.out.println("");
                         break;
                         
                     case 2:
@@ -77,14 +76,12 @@ public class Console {
                         System.out.print("Id Pasien : ");
                         String IdP = IStr.nextLine();
                         app.removePasien(IdP);
-                        System.out.println("");
                         break;
                         
                     case 3:
                         System.out.println("");
                         System.out.println("   MENAMPILKAN DATA PASIEN");
                         app.viewListConsole(app.getListPasien());
-                        System.out.println("");
                         break;
                         
                     case 4:
@@ -94,7 +91,6 @@ public class Console {
                         int indeks = IInt.nextInt();
                         Pasien p = app.getPasienIdx(indeks);
                         System.out.println(p);
-                        System.out.println("");
                         break;
                        
                     case 5:
@@ -104,7 +100,6 @@ public class Console {
                         String IdPas = IStr.nextLine();
                         p = app.getPasien(IdPas);
                         System.out.println(p);
-                        System.out.println("");
                         break;
                         
                     case 0:
@@ -148,7 +143,6 @@ public class Console {
                         System.out.print("Spesialis    : ");
                         String Spesialis = IStr.nextLine();
                         app.createDokter(Nama, Umur, tglLahir, IdDokter, Spesialis);
-                        System.out.println("");
                         break;
                     
                     case 2:
@@ -172,7 +166,6 @@ public class Console {
                         String idDokter = IStr.nextLine();
                         Dokter d = app.getDokter(idDokter);
                         System.out.println(d);
-                        System.out.println("");
                         break;
                         
                     case 5:
@@ -182,7 +175,6 @@ public class Console {
                         int idx = IInt.nextInt();
                         d = app.getDokterIdx(idx);
                         System.out.println(d);
-                        System.out.println("");
                         break;
                         
                     case 0:
@@ -207,7 +199,8 @@ public class Console {
                 System.out.println("  2. Menghapus Ruangan");
                 System.out.println("  3. Menampilkan Data Ruangan");
                 System.out.println("  4. Input Pasien Inap");
-                System.out.println("  5. Lihat Ruangan berdasarkan Id"); //ada Pasien Inap
+                System.out.println("  5. Input Diagnosa Pasien");
+                System.out.println("  6. Lihat Ruangan beserta Pasien Inap"); //ada Pasien Inap
                 System.out.println("");
                 System.out.print("Pilih Menu :");
                 pil1 = inputPilihan();
@@ -231,8 +224,8 @@ public class Console {
                         break;
                         
                     case 3:
-                        System.out.println("   MENAMPILKAN DATA RUANGAN");
                         System.out.println("");
+                        System.out.println("   MENAMPILKAN DATA RUANGAN");
                         app.viewListConsole(app.getListRuangan());
                         break;
                         
@@ -245,13 +238,28 @@ public class Console {
                         String idPasien = IStr.nextLine();
                         System.out.print("Masukkan Id Dokter :");
                         String idDktr = IStr.nextLine();
-                        //app.addPasienInap(idRuangan, idPasien, iddktr);
-                        System.out.println("");
+                        Ruangan r = app.getRuangan(idRuangan);
+                        Pasien p = app.getPasien(idPasien);
+                        Dokter d = app.getDokter(idDktr);
+                        app.createPasienInap(r, p, d);
                         break;
                         
-                    case 5:
+                        case 5:
+                        System.out.println("   INPUT DIAGNOSA PASIEN");
+                        System.out.print("Masukkan Id Ruangan :");
+                        String idruangan = IStr.nextLine();
+                        System.out.print("Masukkan Id Pasien :");
+                        String idpasien = IStr.nextLine();
+                        System.out.print("Diagnosa yang ingin ditambahkan :");
+                        String sakit = IStr.nextLine();
+                        r = app.getRuangan(idruangan);
+                        PasienInap pi = r.getPasienInap(idpasien);
+                        pi.addDiagnosa(sakit);
+                        break;
+                        
+                    case 6:
                         System.out.println("");
-                        System.out.println("    LIHAT PASIEN");
+                        System.out.println("    LIHAT RUANGAN BESERTA PASIEN INAP");
                         System.out.print("Masukkan Id Ruangan: ");//ADA PASIEN INAPNYA
                         
                     case 0:

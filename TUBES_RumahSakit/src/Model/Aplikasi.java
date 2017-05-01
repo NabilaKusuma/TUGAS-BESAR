@@ -195,14 +195,11 @@ public class Aplikasi {
         jmlRuangan++;
     }
     
-    
-    public Ruangan getRuangan(String IdRuangan) { //menggunakan id
+    public Ruangan getRuangan (String id){
         return daftarRuangan.stream()
-                .filter(e -> e.getIdRuangan().equals(IdRuangan))
+                .filter(r -> r.getIdRuangan().equals(id))
                 .findFirst().orElse(null);
     }
-    
-   
     
     //public boolean createPasienInap(String idPasien, String idDokter) {    
     //    for (Ruangan r : daftarRuangan){
@@ -216,10 +213,12 @@ public class Aplikasi {
     //}
     
      //belum
-    //public void createPasienInap (Pasien pasien, Dokter dokter){
-    //    daftarPasien.add(new Pasien(pasien, dokter));
-    //    jmlPasien++;
-    //}
+    Ruangan r = new Ruangan("123","A-101"); 
+    
+    public void createPasienInap (Ruangan r, Pasien pasien, Dokter dokter){
+        r.createPasienInap(pasien, dokter);
+        jmlPasien++;
+    }
     
    //public Pasien getPasienInap (String id){
     //    return daftarPasien.stream()

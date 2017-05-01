@@ -5,6 +5,9 @@
  */
 package viewGUI;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author ASUS
@@ -141,6 +144,38 @@ public class MenuUtama extends javax.swing.JFrame {
         });
     }
 
+    public JButton getJBExit() {
+        return JBExit;
+    }
+
+    public void setJBExit(JButton JBExit) {
+        this.JBExit = JBExit;
+    }
+
+    public JButton getjBDataDokter() {
+        return jBDataDokter;
+    }
+
+    public void setjBDataDokter(JButton jBDataDokter) {
+        this.jBDataDokter = jBDataDokter;
+    }
+
+    public JButton getjBDataPasien() {
+        return jBDataPasien;
+    }
+
+    public void setjBDataPasien(JButton jBDataPasien) {
+        this.jBDataPasien = jBDataPasien;
+    }
+
+    public JButton getjBDataRuangan() {
+        return jBDataRuangan;
+    }
+
+    public void setjBDataRuangan(JButton jBDataRuangan) {
+        this.jBDataRuangan = jBDataRuangan;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBExit;
     private javax.swing.JButton jBDataDokter;
@@ -150,5 +185,12 @@ public class MenuUtama extends javax.swing.JFrame {
     private java.awt.Label jLSIPIRS;
     // End of variables declaration//GEN-END:variables
 
-
+    public void ActionListener(ActionListener e){
+        JBExit.addActionListener(e);
+        jBDataDokter.addActionListener(e);
+        jBDataPasien.addActionListener(e);
+        jBDataRuangan.addActionListener(e);
+    }
+    
+    
 }
