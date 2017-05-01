@@ -46,14 +46,12 @@ public class Console {
         do {
             try {
                 System.out.println("");
-                System.out.println("     MENU DATA PASIEN");
+                System.out.println("   MENU DATA PASIEN");
                 System.out.println("  1. Daftar Pasien");
-                //System.out.println("  2. Daftar Pasien Inap"); //Mendaftarkan Pasien menjadi Pasien Inap
                 System.out.println("  2. Menghapus Pasien");
                 System.out.println("  3. Menampilkan Data Pasien");
-                //System.out.println("  5. Menampilkan Data Pasien Inap"); //Hanya Pasien yg diopname
-                System.out.println("  4. Mencari Pasien berdasarkan Indeks"); // belom
-                System.out.println("  5. Mencari Pasien berdasarkan Id Pasien");
+                System.out.println("  4. Mencari Pasien berdasarkan Indeks"); // belom berhasil
+                System.out.println("  5. Mencari Pasien berdasarkan Id Pasien");// belum berhasil
                 System.out.println("");
                 System.out.print("Pilih Menu :");
                 pil1 = inputPilihan();
@@ -70,49 +68,42 @@ public class Console {
                         System.out.print("Id Pasien    : ");
                         String IdPasien = IStr.nextLine();
                         app.createPasien(Nama, Umur, tglLahir, IdPasien);
+                        System.out.println("");
                         break;
-                    //case 2:
-                    //    System.out.println("");
-                    //    System.out.println("");
-                    //    System.out.println("   DAFTAR PASIEN INAP");
-                    //    System.out.println("");
-                    //    System.out.println("Nama :");
-                    //    String Nama = IStr.nextLine();
-                    //    System.out.println("Dokter : ");
-                    //    String Nama = IStr.nextLine(); //bingung nama atributnya
-                    //    int jmlDiagnosa=0;
-                    //    String Diagnosa[jmlDiagnosa] = IStr.nextLine();
-                    //    jmlDiagnosa++; //diagnosanya baru 1
+                        
                     case 2:
                         System.out.println("");
                         System.out.println("   MENGHAPUS PASIEN");
                         System.out.print("Id Pasien : ");
                         String IdP = IStr.nextLine();
                         app.removePasien(IdP);
+                        System.out.println("");
                         break;
                         
                     case 3:
                         System.out.println("");
                         System.out.println("   MENAMPILKAN DATA PASIEN");
-                        System.out.println("");
                         app.viewListConsole(app.getListPasien());
+                        System.out.println("");
                         break;
                         
                     case 4:
                         System.out.println("");
-                        System.out.println("    MENCARI PASIEN BERDASARKAN INDEKS");
+                        System.out.println("   MENCARI PASIEN BERDASARKAN INDEKS");
                         System.out.print("Masukkan Indeks Pasien: ");
                         int indeks = IInt.nextInt();
-                        app.getPasienIdx(indeks);
+                        Pasien p = app.getPasienIdx(indeks);
+                        System.out.println(p);
                         System.out.println("");
                         break;
                        
                     case 5:
                         System.out.println("");
-                        System.out.println("    MENCARI PASIEN BERDASARKAN ID");
+                        System.out.println("   MENCARI PASIEN BERDASARKAN ID");
                         System.out.print("Masukkan Id Pasien: ");
                         String IdPas = IStr.nextLine();
-                        app.getPasien(IdPas);
+                        p = app.getPasien(IdPas);
+                        System.out.println(p);
                         System.out.println("");
                         break;
                         
@@ -154,9 +145,10 @@ public class Console {
                         int Umur = IInt.nextInt();
                         System.out.print("Id Dokter    : ");
                         String IdDokter = IStr.nextLine();
-                        System.out.print("Spesialis    :");
+                        System.out.print("Spesialis    : ");
                         String Spesialis = IStr.nextLine();
                         app.createDokter(Nama, Umur, tglLahir, IdDokter, Spesialis);
+                        System.out.println("");
                         break;
                     
                     case 2:
@@ -178,7 +170,8 @@ public class Console {
                         System.out.println("    MENCARI DOKTER BERDASARKAN ID");
                         System.out.print("Masukkan Id Dokter: ");
                         String idDokter = IStr.nextLine();
-                        app.getDokter(idDokter);
+                        Dokter d = app.getDokter(idDokter);
+                        System.out.println(d);
                         System.out.println("");
                         break;
                         
@@ -187,7 +180,8 @@ public class Console {
                         System.out.println("    MENCARI DOKTER BERDASARKAN INDEKS");
                         System.out.print("Masukkan indeks Dokter: ");
                         int idx = IInt.nextInt();
-                        app.getDokterIdx(idx);
+                        d = app.getDokterIdx(idx);
+                        System.out.println(d);
                         System.out.println("");
                         break;
                         

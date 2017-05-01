@@ -61,12 +61,6 @@ public class Aplikasi {
         jmlDokter++;
     }
     
-    //public Dokter getDokter (String id){
-    //    return daftarDokter.stream()
-    //            .filter(d -> d.getIdDokter().equals(id))
-    //            .findFirst().orElse(null);
-    //  }
- 
     public Dokter getDokterIdx (int index){
         Dokter d = daftarDokter.get(index);
         return d;
@@ -221,13 +215,13 @@ public class Aplikasi {
     //    return false;
     //}
     
-    // belum
+     //belum
     //public void createPasienInap (Pasien pasien, Dokter dokter){
     //    daftarPasien.add(new Pasien(pasien, dokter));
     //    jmlPasien++;
     //}
     
-    //public Pasien getPasienInap (String id){
+   //public Pasien getPasienInap (String id){
     //    return daftarPasien.stream()
     //            .filter(p -> p.getIdPasien().equals(id))
     //            .findFirst().orElse(null);
@@ -245,29 +239,6 @@ public class Aplikasi {
     //        }
     //    }
     //}
-    
-    public void addPasienInap(String IdRuangan, String IdPasien, String IdDokter) {
-        Ruangan ruangan, ruanganCek;
-        ruanganCek = getRuangan(IdRuangan);
-        if ((ruanganCek!=null) && (ruanganCek instanceof Ruangan)){
-            ruangan = ruanganCek;
-        } else {
-            throw new IllegalStateException("Ruangan tidak ada");
-        }
-        
-        Pasien p = getPasien(IdPasien);
-        Dokter d = getDokter(IdDokter);
-        
-        //if ((p!=null) && (d!=null) && (p instanceof Pasien)){
-        //    if (ruangan.getPasienInapIdx(IdPasien) == null){
-        //        ruangan.addPasienInap(p, dokter);
-        //    } else {
-        //        throw new IllegalStateException("Ruangan sudah terpakai");
-        //    } else {
-        //            throw new IllegalStateException("Ruangan tidak ada");
-        //            }
-        //}
-    }
     
     public void removeRuangan(String IdRuangan) {
         for (int i = 0; i < jmlRuangan; i++) {
